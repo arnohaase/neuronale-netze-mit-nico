@@ -2,7 +2,6 @@ window.jQuery = require ('jquery');
 window.$ = jQuery;
 
 require ('bootstrap');
-// require ('bootstrap/dist/css/bootstrap.css');
 
 import Fluxible from 'fluxible';
 import {RouteStore} from 'fluxible-router';

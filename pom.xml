@@ -16,6 +16,7 @@
         <scalatest.mavenplugin.version>1.0</scalatest.mavenplugin.version>
         <scala.mavenplugin.version>3.2.2</scala.mavenplugin.version>
         <version.akka>2.5.4</version.akka>
+        <version.akka-http>10.0.9</version.akka-http>
     </properties>
 
     <build>
@@ -81,6 +82,11 @@
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource><directory>src/main/resources</directory></resource>
+            <resource><directory>src/main/assets</directory></resource>
+            <resource><directory>src/main/assets-gen</directory></resource>
+        </resources>
     </build>
     <dependencies>
         <dependency>
@@ -93,6 +99,22 @@
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-actor_${scala.major.version}</artifactId>
             <version>${version.akka}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-stream_${scala.major.version}</artifactId>
+            <version>${version.akka}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http_${scala.major.version}</artifactId>
+            <version>${version.akka-http}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.typesafe.play</groupId>
+            <artifactId>play-json_${scala.major.version}</artifactId>
+            <version>2.6.0-M6</version>
         </dependency>
 
         <dependency>
